@@ -15,13 +15,13 @@ import adafruit_gps
 
 # for a computer, use the pyserial library for uart access
 import serial
-uart = serial.Serial("/dev/ttyUSB0", baudrate=9600, timeout=10)
+uart = serial.Serial("/dev/ttyTHS1", baudrate=9600, timeout=10)
 
 # If using I2C, we'll create an I2C interface to talk to using default pins
-# i2c = busio.I2C(board.SCL, board.SDA)
+# i2c = board.I2C()
 
 # Create a GPS module instance.
-gps = adafruit_gps.GPS(uart, debug=False)  # Use UART/pyserial
+gps = adafruit_gps.GPS(uart)  # Use UART/pyserial
 # gps = adafruit_gps.GPS_GtopI2C(i2c, debug=False)  # Use I2C interface
 
 # Initialize the GPS module by changing what data it sends and at what rate.

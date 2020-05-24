@@ -43,12 +43,12 @@ LOG_FILE = '/sd/gps.txt'     # Example for writing to SD card path /sd/gps.txt
 # a slightly higher timeout (GPS modules typically update once a second).
 # These are the defaults you should use for the GPS FeatherWing.
 # For other boards set RX = GPS module TX, and TX = GPS module RX pins.
-uart = busio.UART(board.TX, board.RX, baudrate=9600, timeout=10)
+#uart = busio.UART(board.TX, board.RX, baudrate=9600, timeout=10)
 
 # If using a USB/Serial converter, use pyserial and update the serial
 # port name to match the serial connection for the GPS!
-# import serial
-# uart = serial.Serial("/dev/ttyUSB0", baudrate=9600, timeout=10)
+import serial
+uart = serial.Serial("/dev/ttyTHS1", baudrate=9600, timeout=10)
 
 # If using I2C, we'll create an I2C interface to talk to using default pins
 # i2c = busio.I2C(board.SCL, board.SDA)

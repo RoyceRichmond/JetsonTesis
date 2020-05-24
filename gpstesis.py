@@ -5,7 +5,7 @@ import board
 import busio
 import adafruit_gps
 import serial
-uart = serial.Serial("/dev/ttyUSB0", baudrate=9600, timeout=10)
+uart = serial.Serial("/dev/ttyTHS1", baudrate=9600, timeout=10)
 # Create a GPS module instance.
 gps = adafruit_gps.GPS(uart, debug=False)  # Use UART/pyserial
 # gps = adafruit_gps.GPS_GtopI2C(i2c, debug=False)  # Use I2C interface
