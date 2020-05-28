@@ -6,5 +6,6 @@ camera should be an easy fix, it still needs field test for the GPS
 
 plotting plots some values and prints the total distance traveled in meters.
 
-gpsoled_exception and plotting are the files that can be used
+gpstesisoled_exception and plotting are the files that can be used
+the plot_GPS_data can plot the data saved from the gpstesisoled_exception program
 
